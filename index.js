@@ -1,7 +1,7 @@
 const puppeteer = require('puppeteer');
 const cron = require('node-cron');
 
-function attendance() {
+async function attendance() {
   const browser = await puppeteer.launch();
   const page = await browser.newPage();
   await page.goto('https://id.jobcan.jp/users/sign_in?app_key=atd');
